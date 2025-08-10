@@ -27,19 +27,19 @@ unsigned int rf_get_delay() {
     return mySwitch.getReceivedDelay();
 }
 
-unsigned int rf_get_protocol() {
-    return mySwitch.getReceivedProtocol();
-}
-
 unsigned int* rf_get_raw_data() {
     return mySwitch.getReceivedRawdata();
+}
+
+unsigned int rf_get_protocol() {
+    return mySwitch.getReceivedProtocol();
 }
 
 void rf_reset() {
     mySwitch.resetAvailable();
 }
 
-void rf_set_pulse_length(int pulse_length) {
+void rf_set_pulse_length(unsigned int pulse_length) {
     mySwitch.setPulseLength(pulse_length);
 }
 
