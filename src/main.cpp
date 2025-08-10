@@ -1,18 +1,34 @@
 #include <Arduino.h>
+#include "rf_module.h"
+
 
 // put function declarations here:
-int myFunction(int, int);
+// int myFunction(int, int);
+
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  Serial.begin(9600);
+  rf_init_rx(2);
 }
+
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  if (rf_available()) {
+    output(
+      rf_get_value(),
+      rf_get_bit_length(),
+      rf_get_delay(),
+      rf_get_raw_data(),
+      rf_get_protocol()
+    );
+    rf_reset();
+  }
 }
 
+
 // put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
+// int myFunction(int x, int y) {
+//  return x + y;
+// }
+// }
+
