@@ -32,3 +32,26 @@ void loop() {
 // }
 // }
 
+
+
+
+
+/* 
+
+MAIN MENU
+> LISTEN & DECODE
+> SAVED SIGNALS
+
+DECODE MODE
+> LISTENING 433.92MHz
+<image>
+
+DECODE MODE
+> SIGNAL DETECTED
+<image>
+
+DECODE MODE
+
+
+*/
+
